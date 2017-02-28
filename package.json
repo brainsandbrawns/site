@@ -1,0 +1,35 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "Basic website for ff",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/tape/bin/tape ./test/_runner.js && istanbul check-coverage --statements 60 --functions 60 --lines 60 --branches 50",
+    "coverage": "istanbul cover ./node_modules/.bin/tape ./test/*.js -r html -o ./test/coverage.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brainsandbrawns/site.git"
+  },
+  "author": "heron2014",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brainsandbrawns/site/issues"
+  },
+  "homepage": "https://github.com/brainsandbrawns/site#readme",
+  "dependencies": {
+    "handlebars": "^4.0.6",
+    "hapi": "^15.2.0",
+    "hoek": "^4.1.0",
+    "inert": "^4.0.2",
+    "vision": "^4.1.0"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "tape": "^4.6.3"
+  }
+}
